@@ -123,3 +123,85 @@ chatList.appendChild(div);
 });
 
 }
+
+const gifts = [
+
+{
+name:"🌹 Роза",
+price:"10 ⭐",
+rarity:"Common"
+},
+
+{
+name:"🧸 Мишка",
+price:"50 ⭐",
+rarity:"Rare"
+},
+
+{
+name:"💎 Кристалл",
+price:"150 ⭐",
+rarity:"Epic"
+},
+
+{
+name:"👑 Золотой голубь",
+price:"500 ⭐",
+rarity:"Legendary"
+},
+
+{
+name:"🚀 TeleGolub NFT",
+price:"1000 ⭐",
+rarity:"NFT"
+}
+
+];
+
+document.querySelectorAll(".chat").forEach(chat=>{
+
+if(chat.textContent.includes("Подарки")){
+
+chat.onclick=()=>{
+
+document.querySelector(".topbar h2").innerHTML="🎁 Подарки";
+
+let html="<div class='gift-grid'>";
+
+gifts.forEach(g=>{
+
+html+=`
+
+<div class="gift">
+
+<div class="gift-icon">
+
+${g.name.split(" ")[0]}
+
+</div>
+
+<h3>${g.name}</h3>
+
+<p>${g.rarity}</p>
+
+<button>
+
+${g.price}
+
+</button>
+
+</div>
+
+`;
+
+});
+
+html+="</div>";
+
+document.querySelector(".messages").innerHTML=html;
+
+}
+
+}
+
+});
