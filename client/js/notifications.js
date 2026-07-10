@@ -65,3 +65,37 @@ class NotificationCenter {
 }
 
 const notify = new NotificationCenter();
+
+const windowNotify = document.getElementById("notifyWindow");
+
+document.getElementById("notificationsBtn").onclick=()=>{
+
+windowNotify.style.display=
+
+windowNotify.style.display==="block"
+
+?
+
+"none"
+
+:
+
+"block";
+
+};
+
+notify.add(
+
+"Добро пожаловать",
+
+"Спасибо за использование TeleGolub."
+
+);
+
+notify.add(
+
+"TeleGolub",
+
+"Не забудьте попробовать TeleGolub Pro."
+
+);
