@@ -325,3 +325,50 @@ TG
 `;
 
 };
+
+const modal = document.getElementById("newChatModal");
+
+document.getElementById("newChat").onclick = () => {
+
+modal.classList.add("active");
+
+};
+
+document.getElementById("cancelChat").onclick = () => {
+
+modal.classList.remove("active");
+
+};
+
+document.getElementById("createChat").onclick = () => {
+
+const name = document
+.getElementById("newChatName")
+.value
+.trim();
+
+if(name===""){
+
+alert("Введите имя.");
+
+return;
+
+}
+
+const div=document.createElement("div");
+
+div.className="chat";
+
+div.innerHTML="👤 "+name;
+
+document
+.querySelector(".chat-list")
+.appendChild(div);
+
+modal.classList.remove("active");
+
+document
+.getElementById("newChatName")
+.value="";
+
+};
