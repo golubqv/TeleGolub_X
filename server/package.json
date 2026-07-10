@@ -1,0 +1,9 @@
+{
+  "name": "telegolub-server",
+  "version": "1.0.0",
+  "description": "TeleGolub Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
