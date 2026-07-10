@@ -79,3 +79,27 @@ chats.forEach(chat=>{
     chatList.appendChild(div);
 
 });
+
+document.getElementById("newChat").onclick=()=>{
+
+alert("Создание нового чата скоро появится.");
+
+}
+
+document.getElementById("newGroup").onclick=()=>{
+
+alert("Создание группы скоро появится.");
+
+}
+
+document.getElementById("newChannel").onclick=()=>{
+
+alert("Создание канала скоро появится.");
+
+}
+
+document.getElementById("settings").onclick=()=>{
+
+alert("Настройки скоро появятся.");
+
+}
