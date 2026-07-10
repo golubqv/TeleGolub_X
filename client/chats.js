@@ -247,3 +247,15 @@ document.querySelector(".messages").innerHTML=html;
 }
 
 });
+
+document.getElementById("audioCall").onclick = () => {
+
+    calls.open("audio");
+
+};
+
+document.getElementById("videoCall").onclick = () => {
+
+    calls.open("video");
+
+};
