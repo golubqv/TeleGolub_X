@@ -1,17 +1,7 @@
-```javascript
-document
-.getElementById("login")
-.onclick = () => {
+const startBtn = document.getElementById("startBtn");
 
-    alert("Страница входа скоро появится.");
+startBtn.addEventListener("click", () => {
 
-}
+    alert("Добро пожаловать в TeleGolub!");
 
-document
-.getElementById("register")
-.onclick = () => {
-
-    alert("Страница регистрации скоро появится.");
-
-}
-```
+});
