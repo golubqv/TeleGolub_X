@@ -104,6 +104,94 @@ alert("Настройки скоро появятся.");
 
 }
 
+document.getElementById("settings").onclick = () => {
+
+document.querySelector(".topbar h2").innerHTML = "⚙ Настройки";
+
+document.querySelector(".messages").innerHTML = `
+
+<div class="settings">
+
+<h2>Настройки TeleGolub</h2>
+
+<div class="setting">
+
+<span>🌙 Темная тема</span>
+
+<label class="switch">
+
+<input id="themeToggle" type="checkbox" checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<div class="setting">
+
+<span>🔔 Уведомления</span>
+
+<label class="switch">
+
+<input type="checkbox" checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<div class="setting">
+
+<span>🔒 Защита аккаунта</span>
+
+<button class="mini">
+
+Открыть
+
+</button>
+
+</div>
+
+<div class="setting">
+
+<span>👑 TeleGolub Pro</span>
+
+<button class="mini">
+
+Управление
+
+</button>
+
+</div>
+
+<div class="setting">
+
+<span>🤖 TeleGolub AI</span>
+
+<button class="mini">
+
+Недоступно
+
+</button>
+
+</div>
+
+</div>
+
+`;
+
+const toggle = document.getElementById("themeToggle");
+
+toggle.onchange = () => {
+
+document.body.classList.toggle("light");
+
+};
+
+};
+
 document.getElementById("pro").onclick = () => {
 
     document.querySelector(".topbar h2").innerHTML = "👑 TeleGolub Pro";
