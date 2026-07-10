@@ -102,6 +102,48 @@ ${chat.unread>0?
 
 `;
 
+    document.addEventListener("keydown",(e)=>{
+
+if(e.ctrlKey){
+
+switch(e.key){
+
+case "1":
+
+router.open("chat");
+
+break;
+
+case "2":
+
+router.open("profile");
+
+break;
+
+case "3":
+
+router.open("settings");
+
+break;
+
+case "4":
+
+router.open("pro");
+
+break;
+
+case "5":
+
+router.open("ai");
+
+break;
+
+}
+
+}
+
+});
+
 div.onclick=()=>{
 
 title.innerHTML=chat.avatar+" "+chat.name;
