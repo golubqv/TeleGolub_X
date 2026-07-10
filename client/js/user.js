@@ -61,3 +61,37 @@ window.addEventListener("load", () => {
     currentUser.render();
 
 });
+
+document.addEventListener("click", (e) => {
+
+    if (e.target.id !== "editProfile") return;
+
+    const username = prompt(
+        "Имя",
+        currentUser.data.username
+    );
+
+    if (username) {
+
+        currentUser.data.username = username;
+
+    }
+
+    const bio = prompt(
+        "Описание",
+        currentUser.data.bio
+    );
+
+    if (bio) {
+
+        currentUser.data.bio = bio;
+
+    }
+
+    currentUser.save();
+
+    currentUser.render();
+
+    alert("Профиль обновлён.");
+
+});
