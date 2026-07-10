@@ -18,49 +18,57 @@ const registerBtn = document.getElementById("registerBtn");
 
 if (registerBtn) {
 
-    registerBtn.onclick = () => {
+    registerBtn.onclick = async () => {
 
-        const username = document.getElementById("username").value;
+        const username = document.getElementById("username").value.trim();
 
-        const email = document.getElementById("email").value;
+        const email = document.getElementById("email").value.trim();
 
         const password = document.getElementById("password").value;
 
-        if (
-            username === "" ||
-            email === "" ||
-            password === ""
-        ) {
+        if (!username || !email || !password) {
 
-            alert("Заполните все поля.");
+            alert("Заполните все поля");
 
             return;
 
         }
 
-        localStorage.setItem("tg_username", username);
+        try {
 
-        localStorage.setItem("tg_email", email);
+            const response = await fetch("http://localhost:3000/register", {
 
-        localStorage.setItem("tg_password", password);
+                method: "POST",
 
-        alert("Аккаунт создан!");
+                headers: {
+                    "Content-Type": "application/json"
+                },
 
-        location.href = "login.html";
+                body: JSON.stringify({
 
-    };
+                    username,
+                    email,
+                    password
 
-}
+                })
 
-// Вход
+            });
 
-const loginBtn = document.getElementById("loginBtn");
+            const result = await response.json();
 
-if (loginBtn) {
+            alert(result.message);
 
-    loginBtn.onclick = () => {
+            if (result.success) {
 
-        alert("Сервер скоро будет подключён.");
+                location.href = "login.html";
+
+            }
+
+        } catch (error) {
+
+            alert("Не удалось подключиться к серверу.");
+
+        }
 
     };
 
