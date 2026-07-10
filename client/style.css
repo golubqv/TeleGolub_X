@@ -168,3 +168,19 @@ text-decoration:none;
 text-decoration:underline;
 
 }
+
+.app{
+
+display:flex;
+
+height:100vh;
+
+background:#08111d;
+
+}
+
+.sidebar{
+
+width:300px;
+
+padding:20
