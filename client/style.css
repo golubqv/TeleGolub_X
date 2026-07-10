@@ -358,3 +358,63 @@ background:#007bff;
 transform:translateX(5px);
 
 }
+
+.pro-card{
+
+max-width:650px;
+
+margin:40px auto;
+
+padding:35px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+color:white;
+
+}
+
+.pro-card h2{
+
+margin-bottom:20px;
+
+}
+
+.pro-card p{
+
+margin-bottom:20px;
+
+}
+
+.pro-card ul{
+
+margin-left:20px;
+
+line-height:2;
+
+}
+
+.buy{
+
+margin-top:25px;
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:18px;
+
+font-size:18px;
+
+cursor:pointer;
+
+background:linear-gradient(90deg,#ffb300,#ff7b00);
+
+color:white;
+
+    }
