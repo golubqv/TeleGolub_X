@@ -1178,3 +1178,63 @@ margin-top:10px;
 color:#79b9ff;
 
 }
+
+.message-author{
+
+font-size:13px;
+
+font-weight:bold;
+
+margin-bottom:6px;
+
+color:#82d1ff;
+
+}
+
+.send{
+
+display:flex;
+
+gap:10px;
+
+padding:15px;
+
+background:rgba(255,255,255,.05);
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.send input{
+
+flex:1;
+
+}
+
+.send button{
+
+width:48px;
+
+height:48px;
+
+border:none;
+
+border-radius:14px;
+
+cursor:pointer;
+
+font-size:18px;
+
+background:#008cff;
+
+color:white;
+
+transition:.2s;
+
+}
+
+.send button:hover{
+
+transform:scale(1.05);
+
+}
