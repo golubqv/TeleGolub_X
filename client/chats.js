@@ -103,3 +103,45 @@ document.getElementById("settings").onclick=()=>{
 alert("Настройки скоро появятся.");
 
 }
+
+document.getElementById("pro").onclick = () => {
+
+    document.querySelector(".topbar h2").innerHTML = "👑 TeleGolub Pro";
+
+    document.querySelector(".messages").innerHTML = `
+
+<div class="pro-card">
+
+<h2>TeleGolub Pro</h2>
+
+<p>
+
+Открой расширенные возможности TeleGolub.
+
+</p>
+
+<ul>
+
+<li>🤖 TeleGolub AI</li>
+
+<li>🎁 Коллекционные подарки</li>
+
+<li>✨ Эксклюзивные темы</li>
+
+<li>☁️ Больше облачного пространства</li>
+
+<li>🚀 Ранний доступ к новым функциям</li>
+
+</ul>
+
+<button class="buy">
+
+Оформить подписку
+
+</button>
+
+</div>
+
+`;
+
+};
