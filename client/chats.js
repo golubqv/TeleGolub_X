@@ -233,3 +233,95 @@ document.getElementById("pro").onclick = () => {
 `;
 
 };
+
+document.getElementById("profile").onclick = () => {
+
+document.querySelector(".topbar h2").innerHTML = "👤 Мой профиль";
+
+document.querySelector(".messages").innerHTML = `
+
+<div class="profile-page">
+
+<div class="big-avatar">
+
+TG
+
+</div>
+
+<h2>Пользователь</h2>
+
+<p class="username">
+
+@username
+
+</p>
+
+<div class="profile-buttons">
+
+<button>
+
+📷 Изменить фото
+
+</button>
+
+<button>
+
+✏️ Изменить имя
+
+</button>
+
+<button>
+
+📝 Описание
+
+</button>
+
+<button>
+
+⭐ Статус
+
+</button>
+
+</div>
+
+<div class="profile-info">
+
+<div>
+
+🎁 Подарков
+
+<b>0</b>
+
+</div>
+
+<div>
+
+👑 TeleGolub Pro
+
+<b>Нет</b>
+
+</div>
+
+<div>
+
+🤖 AI
+
+<b>Недоступен</b>
+
+</div>
+
+<div>
+
+🏆 Достижения
+
+<b>0</b>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+};
