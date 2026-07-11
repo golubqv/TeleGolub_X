@@ -32,19 +32,9 @@ class Collection {
 
             html += `
 
-<div class="gift-grid">
-
-`;
-
-            items.forEach(item=>{
-
-                html += `
-
-html += `
-
 <div class="gift-card">
 
-    <div class="gift-emoji">
+    <div class="gift-emoji ${item.animated ? "animated-gift" : ""}">
 
         ${item.emoji}
 
@@ -52,24 +42,49 @@ html += `
 
     <h3>${item.name}</h3>
 
-    <p>${item.rarity}</p>
+    <span
+        class="rarity"
+        style="background:${item.rarityColor};">
 
-    <small>${item.serial}</small>
+        ${item.rarity}
 
-    <br><br>
+    </span>
+
+    <p>
+
+        ⭐ Уровень ${item.level}
+
+    </p>
 
     <small>
 
-        Получен: ${item.received}
+        ${item.serial}
 
     </small>
+
+    <br>
+
+    <small>
+
+        ${item.received}
+
+    </small>
+
+    <br><br>
+
+    <button
+
+        class="favoriteGift"
+
+        data-id="${item.id}">
+
+        ${item.favorite ? "❤️ В избранном" : "🤍 В избранное"}
+
+    </button>
 
 </div>
 
 `;
-
-`;
-
             });
 
             html += "</div>";
