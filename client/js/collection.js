@@ -99,4 +99,26 @@ class Collection {
 
 }
 
+document.querySelectorAll(".favoriteGift").forEach(button=>{
+
+    button.onclick=()=>{
+
+        const item=this.items.find(
+
+            gift=>gift.id===button.dataset.id
+
+        );
+
+        if(!item) return;
+
+        item.favorite=!item.favorite;
+
+        db.save("tg_inventory",this.items);
+
+        this.open();
+
+    };
+
+});
+
 const collection = new Collection();
