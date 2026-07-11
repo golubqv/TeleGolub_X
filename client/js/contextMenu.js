@@ -92,10 +92,11 @@ class ContextMenu {
                 chat.pinned = !chat.pinned;
                 break;
 
-            case "archive":
+         case "archive":
 
-                chat.archived = true;
-                break;
+    archive.archive(chat);
+
+    return;
 
             case "favorite":
 
