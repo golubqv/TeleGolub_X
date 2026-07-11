@@ -40,27 +40,33 @@ class Collection {
 
                 html += `
 
+html += `
+
 <div class="gift-card">
 
-<div class="gift-emoji">
+    <div class="gift-emoji">
 
-${item.emoji}
+        ${item.emoji}
+
+    </div>
+
+    <h3>${item.name}</h3>
+
+    <p>${item.rarity}</p>
+
+    <small>${item.serial}</small>
+
+    <br><br>
+
+    <small>
+
+        Получен: ${item.received}
+
+    </small>
 
 </div>
 
-<h3>
-
-${item.name}
-
-</h3>
-
-<p>
-
-${item.rarity}
-
-</p>
-
-</div>
+`;
 
 `;
 
