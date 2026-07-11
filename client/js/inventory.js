@@ -30,6 +30,18 @@ class Inventory {
 
         received: new Date().toLocale
 
+        received: new Date().toLocaleString(),
+
+        favorite: false,
+
+        animated: rarity.name === "Legendary" || rarity.name === "Mythic"
+
+    });
+
+    db.save("tg_inventory", this.items);
+
+}
+
     const rarity = giftGenerator.randomRarity();
 
     }
