@@ -2,25 +2,23 @@ class Inventory {
 
     constructor() {
 
-        this.items = db.load("tg_inventory", []);
-
-    }
-
-    add(gift) {
-
         this.items.push({
 
-            id: crypto.randomUUID(),
+    id: crypto.randomUUID(),
 
-            giftId: gift.id,
+    serial: "#" + Math.floor(Math.random() * 1000000),
 
-            emoji: gift.emoji,
+    giftId: gift.id,
 
-            name: gift.name,
+    emoji: gift.emoji,
 
-            rarity: gift.rarity,
+    name: gift.name,
 
-            received: Date.now()
+    rarity: gift.rarity,
+
+    received: new Date().toLocaleString()
+
+});
 
         });
 
