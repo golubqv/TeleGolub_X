@@ -259,3 +259,13 @@ document.getElementById("videoCall").onclick = () => {
     calls.open("video");
 
 };
+
+document.getElementById("logout").onclick = () => {
+
+    if(confirm("Выйти из аккаунта?")){
+
+        Session.logout();
+
+    }
+
+};
