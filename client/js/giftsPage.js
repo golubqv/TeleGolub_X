@@ -56,17 +56,31 @@ events() {
 
         button.onclick = () => {
 
-            const id = Number(button.dataset.id);
+    const id = Number(button)
 
-            const gift = giftService.getAll().find(g => g.id === id);
+            const gift = giftService.getAll().find(
 
-            if (!gift) return;
+    g => g.id === id
 
-            alert(
+);
 
-                `🎁 Подарок "${gift.name}" отправлен!`
+if(!gift) return;
 
-            );
+inventory.add(gift);
+
+notify.add(
+
+    "🎁 Новый подарок",
+
+    `Вы получили подарок "${gift.name}"`
+
+);
+
+alert(
+
+    `🎉 Подарок "${gift.name}" добавлен в вашу коллекцию!`
+
+);
 
         };
 
