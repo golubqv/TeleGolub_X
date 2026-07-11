@@ -2,27 +2,35 @@ class Inventory {
 
     constructor() {
 
-        this.items.push({
-
-    id: crypto.randomUUID(),
-
-    serial: "#" + Math.floor(Math.random() * 1000000),
-
-    giftId: gift.id,
-
-    emoji: gift.emoji,
-
-    name: gift.name,
-
-    rarity: gift.rarity,
-
-    received: new Date().toLocaleString()
+        t
 
 });
 
         });
 
-        db.save("tg_inventory", this.items);
+    add(gift) {
+
+    const rarity = giftGenerator.randomRarity();
+
+    this.items.push({
+
+        id: crypto.randomUUID(),
+
+        serial: "#" + Math.floor(Math.random()*1000000),
+
+        emoji: gift.emoji,
+
+        name: gift.name,
+
+        rarity: rarity.name,
+
+        rarityColor: rarity.color,
+
+        level: Math.floor(Math.random()*100)+1,
+
+        received: new Date().toLocale
+
+    const rarity = giftGenerator.randomRarity();
 
     }
 
