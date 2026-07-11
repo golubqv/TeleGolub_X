@@ -31,3 +31,102 @@ class ContextMenu {
     }
 
     show(x, y, chatId) {
+                this.chatId = chatId;
+
+        this.menu.style.left = x + "px";
+        this.menu.style.top = y + "px";
+        this.menu.classList.add("show");
+
+    }
+
+    hide() {
+
+        this.menu.classList.remove("show");
+
+    }
+
+    init() {
+
+        document.addEventListener("contextmenu", (e) => {
+
+            const chat = e.target.closest(".sidebar-chat");
+
+            if (!chat) return;
+
+            e.preventDefault();
+
+            this.show(
+
+                e.pageX,
+
+                e.pageY,
+
+                Number(chat.dataset.id)
+
+            );
+
+        });
+
+        this.menu.querySelectorAll("div").forEach(item => {
+
+            item.onclick = () => {
+
+                this.action(item.dataset.action);
+
+            };
+
+        });
+
+    }
+
+    action(type) {
+
+        const chat = sidebar.chats.find(c => c.id === this.chatId);
+
+        if (!chat) return;
+
+        switch(type){
+
+            case "pin":
+
+                chat.pinned = !chat.pinned;
+                break;
+
+            case "archive":
+
+                chat.archived = true;
+                break;
+
+            case "favorite":
+
+                chat.favorite = !chat.favorite;
+                break;
+
+            case "mute":
+
+                chat.muted = !chat.muted;
+                break;
+
+            case "delete":
+
+                sidebar.chats =
+                    sidebar.chats.filter(c=>c.id!==chat.id);
+                break;
+
+        }
+
+        sidebar.render();
+
+        this.hide();
+
+    }
+
+}
+
+const contextMenu = new ContextMenu();
+
+window.addEventListener("load",()=>{
+
+    contextMenu.init();
+
+});
