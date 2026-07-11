@@ -230,12 +230,17 @@ placeholder="Введите имя пользователя">
 
 </button>
 
+    <button id="logout">
+🚪 Выйти
+    </button>
+
 </div>
 
 </div>
 
     </div>
-
+    
+<script src="../js/session.js"></script>
     <script src="../js/database.js"></script>
 <script src="../js/chatService.js"></script>
 <script src="../js/messageService.js"></script>
@@ -252,3 +257,11 @@ placeholder="Введите имя пользователя">
 
 </body>
 </html>
+
+<script>
+window.addEventListener("load", () => {
+
+    Session.check();
+
+});
+    </script>
